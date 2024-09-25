@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>E-Commerce Platform</h1>
+        <input type="text" id="search" placeholder="Search products">
+    </div>
+
+    <div class="products" id="products-container">
+        <div class="product-card">
+            <img src="https://th.bing.com/th/id/OIP.RQbz2iNZ0B03Et_jc7GO8AHaHa?rs=1&pid=ImgDetMain" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Rating: 4.5</p>
+            <p>₹500</p>
+            <button onclick="addToCart(1)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://forever-moissanite.com/wp-content/uploads/2018/08/203r1-Twist-Round-Cut-Rose-Gold-Engagement-Ring-by-forever-moissanite-.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Rating: 4.0</p>
+            <p>₹800</p>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://th.bing.com/th/id/OIP.YguOkIP2xIjpoReX_q0R4gHaHa?rs=1&pid=ImgDetMain" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Rating: 4.8</p>
+            <p>₹1,000</p>
+            <button onclick="addToCart(3)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart-price-section">
+        <!-- Cart Section -->
+        <div class="cart-container">
+            <h2>Cart</h2>
+            <div id="cart-items">
+                <div class="cart-item">
+                    <img src="https://th.bing.com/th/id/OIP.RQbz2iNZ0B03Et_jc7GO8AHaHa?rs=1&pid=ImgDetMain" alt="Product 1">
+                    <div>
+                        <p>Product 1</p>
+                        <p>₹500</p>
+                    </div>
+                    <div>
+                        <button onclick="updateQuantity(1, 'decrease')">-</button>
+                        <span>2</span>
+                        <button onclick="updateQuantity(1, 'increase')">+</button>
+                    </div>
+                    <button onclick="removeFromCart(1)">Remove</button>
+                </div>
+
+                <div class="cart-item">
+                    <img src="https://forever-moissanite.com/wp-content/uploads/2018/08/203r1-Twist-Round-Cut-Rose-Gold-Engagement-Ring-by-forever-moissanite-.jpg" alt="Product 2">
+                    <div>
+                        <p>Product 2</p>
+                        <p>₹800</p>
+                    </div>
+                    <div>
+                        <button onclick="updateQuantity(2, 'decrease')">-</button>
+                        <span>1</span>
+                        <button onclick="updateQuantity(2, 'increase')">+</button>
+                    </div>
+                    <button onclick="removeFromCart(2)">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="price-details">
+            <h3>Price Details</h3>
+            <p>Total MRP: ₹<span id="total-mrp">1800</span></p>
+            <p>Coupon Discount: ₹50</p>
+            <p>Platform Fee: ₹10</p>
+            <p>Shipping Charges: ₹20</p>
+            <p>Total Amount: ₹<span id="total-amount">1780</span></p>
+            <button id="place-order">Place Order</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
